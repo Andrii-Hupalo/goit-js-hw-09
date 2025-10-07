@@ -15,4 +15,141 @@
 @import url('./vite-promo.css');
 @import url('./badges.css');
 @import url('./back-link.css');
-@import url('./footer.css');
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(
+    270deg,
+    #04c3f3,
+    #fae7c4,
+    #85df49,
+    #f06dcb,
+    #693ad6
+  );
+  background-size: 1000% 1000%;
+  animation: gradientShift 20s ease infinite;
+}
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.gallery {
+  width: 100%;
+  max-width: 1440px;
+  margin: 20px auto;
+}
+.gallery-item {
+  flex: 0 1 calc(33.333% - 24px);
+  max-width: 360px;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  padding: 0;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 8px;
+}
+img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.feedback-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 24px;
+  width: 408px;
+  height: 296px;
+}
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+/* input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+}
+input:hover {
+  font-family: 'Montserrat', sans-serif;
+  border: 2px;
+} */
+
+input[type='email'] {
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 8px;
+  width: 360px;
+  height: 40px;
+  border-style: solid;
+  font-size: 16px;
+}
+input[type='email']:hover {
+  border: solid;
+}
+
+textarea {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  min-height: 80px;
+  font-size: 16px;
+  height: auto;
+  overflow: hidden;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.button-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 95px;
+  height: 40px;
+  background: #4e75ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  line-height: 24px;
+}
+.button-submit:hover {
+  background: #6c8cff;
+}
