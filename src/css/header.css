@@ -1,5 +1,6 @@
 .header {
   padding: 20px 0;
+  margin: auto;
 }
 .nav {
   display: flex;
@@ -24,6 +25,7 @@
   transition: 200ms ease-in;
 }
 .nav-link:hover,
+.nav-item:hover,
 .nav-link:focus {
   color: #747bff;
 }
